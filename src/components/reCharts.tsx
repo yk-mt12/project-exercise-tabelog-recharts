@@ -66,7 +66,7 @@ export const ReCharts = () => {
       fullMark: 7,
     },
     {
-      restaurant: "価格帯",
+      restaurant: "コストパフォーマンス",
       A: 4.25,
       B: 2.66,
       C: 7,
@@ -77,7 +77,8 @@ export const ReCharts = () => {
 
   return (
     <>
-      <div>
+      <div className="restaurants">
+        <p>店舗名一覧</p>
         <input type="checkbox" id="0" value="0" onClick={toggleChecked1} />
         本湖月
         <input type="checkbox" id="1" value="1" onClick={toggleChecked2} />
