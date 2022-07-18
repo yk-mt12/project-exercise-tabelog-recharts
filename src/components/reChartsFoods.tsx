@@ -16,6 +16,7 @@ type Props = {
   isChecked4?: boolean;
 };
 
+// 料理のグラフ
 export const ReChartsFoods = (props: Props) => {
   const { isChecked1, isChecked2, isChecked3, isChecked4 } = props;
   // A -> 本湖月, B -> 鮨 おおが, C -> 蓮心, D -> 米増
