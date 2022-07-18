@@ -1,8 +1,27 @@
 .App {
+  width: 100%;
+  height: auto;
   text-align: center;
 }
 
-.SRecharts {
-  margin-top: 20px;
+.SRechartsBlock {
   height: 500px;
+}
+
+.SRechartsFood {
+  position: absolute;
+  margin-left: 100px;
+  width: 40%;
+  height: 500px;
+}
+
+.SRechartsShop {
+  position: absolute;
+  right: 5%;
+  width: 40%;
+  height: 500px;
+}
+
+.restaurants {
+  margin-bottom: 16;
 }
