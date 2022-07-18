@@ -1,4 +1,3 @@
-import { useState } from "react";
 import {
   Radar,
   RadarChart,
@@ -9,28 +8,19 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-export const ReCharts = () => {
-  const [isChecked1, setIsChecked1] = useState<boolean>(false);
-  const [isChecked2, setIsChecked2] = useState<boolean>(false);
-  const [isChecked3, setIsChecked3] = useState<boolean>(false);
-  const [isChecked4, setIsChecked4] = useState<boolean>(false);
+type Props = {
+  isChecked1?: boolean;
+  isChecked2?: boolean;
+  isChecked3?: boolean;
+  isChecked4?: boolean;
+};
 
-  const toggleChecked1 = () => {
-    setIsChecked1(!isChecked1);
-  };
+export const ReChartsShop = (props: Props) => {
+  const { isChecked1, isChecked2, isChecked3, isChecked4 } = props;
 
-  const toggleChecked2 = () => {
-    setIsChecked2(!isChecked2);
-  };
-
-  const toggleChecked3 = () => {
-    setIsChecked3(!isChecked3);
-  };
-
-  const toggleChecked4 = () => {
-    setIsChecked4(!isChecked4);
-  };
-
+  console.log('====================================');
+  console.log(isChecked1, isChecked2, isChecked3, isChecked4);
+  console.log('====================================');
   // A -> 本湖月, B -> 鮨 おおが, C -> 蓮心, D -> 米増
   const data = [
     {
@@ -77,17 +67,6 @@ export const ReCharts = () => {
 
   return (
     <>
-      <div className="restaurants">
-        <p>店舗名一覧</p>
-        <input type="checkbox" id="0" value="0" onClick={toggleChecked1} />
-        本湖月
-        <input type="checkbox" id="1" value="1" onClick={toggleChecked2} />
-        鮨 おおが
-        <input type="checkbox" id="2" value="2" onClick={toggleChecked3} />
-        蓮心
-        <input type="checkbox" id="3" onClick={toggleChecked4} />
-        米増
-      </div>
       <ResponsiveContainer width="100%" height="100%">
         <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
           <PolarGrid />
